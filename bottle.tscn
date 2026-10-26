@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cprj08ogq3ik0"]
+
+[ext_resource type="Texture2D" uid="uid://8tbmgrbctbu1" path="res://JEMA_GER_1654-06-removebg-preview.png" id="1_6k8ux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l72i1"]
+size = Vector2(31.5, 127.5)
+
+[node name="bottle" type="Area2D" unique_id=19895980]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=812388155]
+position = Vector2(379, 802)
+scale = Vector2(0.19724771, 0.2552448)
+texture = ExtResource("1_6k8ux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1531367237]
+position = Vector2(378.25, 796.75)
+shape = SubResource("RectangleShape2D_l72i1")

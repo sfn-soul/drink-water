@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bms3to5b6nv3g"]
+
+[ext_resource type="Texture2D" uid="uid://bi4kbvsuy8ay3" path="res://ducky-idle.png" id="1_4flbx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l72i1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m7q8q"]
+size = Vector2(26, 55)
+
+[node name="player" type="CharacterBody2D" unique_id=584356521]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1233685176]
+texture_filter = 1
+position = Vector2(7, -27)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_l72i1")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1244583306]
+position = Vector2(9, 5)
+shape = SubResource("RectangleShape2D_m7q8q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1826757315]
+position_smoothing_enabled = true
